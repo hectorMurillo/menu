@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta de Menú</title>
+    <style>
+        /* Importar una fuente profesional de Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+        /* Colores Principales */
+        :root {
+            --color-rojo: #E00000;
+            --color-negro: #1a1a1a;
+            --color-texto: #333333;
+            --color-fondo: #f4f4f4;
+            --color-blanco: #ffffff;
+            --sombra-tarjeta: 0 10px 30px rgba(0, 0, 0, 0.07);
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            margin: 0;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background-color: var(--color-blanco);
+            border-radius: 12px;
+            box-shadow: var(--sombra-tarjeta);
+            overflow: hidden;
+        }
+
+        /* --- Encabezado --- */
+        .header {
+            background-color: var(--color-negro);
+            color: var(--color-blanco);
+            padding: 2.5rem 3rem;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        /* --- Secciones Principales --- */
+        .main-section {
+            padding: 2.5rem 3rem;
+            border-bottom: 1px solid #eee;
+        }
+        .main-section:last-child {
+            border-bottom: none;
+        }
+        .main-section > h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-rojo);
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--color-rojo);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        /* --- Tarjetas de Platillos --- */
+        .menu-item {
+            background-color: #fafafa;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .menu-item h3 {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: var(--color-negro);
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        .item-subtitle {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+        }
+        
+        /* --- Descripciones y Listas --- */
+        .description-block h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--color-negro);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .description-block p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .description-block ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .description-block ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+        /* Icono de check o viñeta */
+        .description-block ul li::before {
+            content: '•';
+            color: var(--color-rojo);
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* --- Precios / Paquetes --- */
+        .package-list {
+            list-style: none;
+            padding: 0;
+        }
+        .package-list li {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.1rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px dashed #ddd;
+        }
+        .package-list li:last-child {
+            border-bottom: none;
+        }
+        .package-list .item-name {
+            font-weight: 500;
+            color: var(--color-texto);
+        }
+        .package-list .item-price {
+            font-weight: 700;
+            color: var(--color-negro);
+        }
+        
+        /* --- Nota Especial --- */
+        .special-note {
+            background-color: #fffbe6;
+            border: 1px solid #ffe58f;
+            color: #8a6d3b;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header class="header">
+            <h1>Propuesta de Menú para<br>"La Familiar"</h1>
+        </header>
+
+        <section class="main-section">
+            <h2>Barras de Antojitos (Servicio en tu Evento)</h2>
+
+            <article class="menu-item">
+                <h3>1. Barra de Flautas</h3>
+                <p class="item-subtitle">Servicio por 1.5 horas</p>
+                
+                <div class="description-block">
+                    <h4>Descripción:</h4>
+                    <p>Servimos 4 deliciosas flautas por persona en un práctico vaso de 16 oz. Tus invitados podrán elegir entre nuestros rellenos caseros y agregarles sus toppings favoritos.</p>
+
+                    <h4>Rellenos a elegir:</h4>
+                    <ul>
+                        <li>Pollo</li>
+                        <li>Res con Papa</li>
+                        <li>Papa con Queso</li>
+                        <li>Camarón <em>(Costo extra)</em></li>
+                    </ul>
+
+                    <h4>Incluye (Toppings):</h4>
+                    <ul>
+                        <li>Salsa Verde y Roja</li>
+                        <li>Crema</li>
+                        <li>Queso</li>
+                        <li>Salsas y Limón</li>
+                    </ul>
+
+                    <h4>Paquetes:</h4>
+                    <ul class="package-list">
+                        <li><span class="item-name">50 Vasos</span> <span class="item-price">$3,250</span></li>
+                        <li><span class="item-name">70 Vasos</span> <span class="item-price">$4,550</span></li>
+                        <li><span class="item-name">100 Vasos</span> <span class="item-price">$6,500</span></li>
+                        <li><span class="item-name">150 Vasos</span> <span class="item-price">$9,500</span></li>
+                        <li><span class="item-name">200 Vasos</span> <span class="item-price">$12,500</span></li>
+                    </ul>
+
+                </div>
+            </article>
+
+            <article class="menu-item">
+                <h3>2. Nachos Box</h3>
+                <p class="item-subtitle">Servicio por 1.5 horas</p>
+
+                <div class="description-block">
+                    <h4>Descripción:</h4>
+                    <p>Una generosa porción de totopos de maíz crujientes, bañados en queso amarillo caliente y acompañados de frijoles puercos, queso rayado y chiles jalapeños.</p>
+                    
+                    <h4>Complementos Incluidos:</h4>
+                    <ul>
+                        <li>Totopos</li>
+                        <li>Queso amarillo</li>
+                        <li>Frijol puerco</li>
+                        <li>Queso rayado</li>
+                        <li>Chile jalapeño</li>
+                    </ul>
+
+                    <h4>Extra (Costo Adicional):</h4>
+                    <ul>
+                        <li>Añade Cochinita Pibil</li>
+                    </ul>
+
+                    <h4>Paquetes:</h4>
+                    <ul class="package-list">
+                        <li><span class="item-name">50 Personas</span> <span class="item-price">$3,750</span></li>
+                        <li><span class="item-name">75 Personas</span> <span class="item-price">$5,625</span></li>
+                        <li><span class="item-name">100 Personas</span> <span class="item-price">$7,500</span></li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="menu-item">
+                <h3>3. Barra de Elote (Esquites)</h3>
+                <p class="item-subtitle">Servicio por 1.5 horas</p>
+
+                <div class="description-block">
+                    <h4>Descripción:</h4>
+                    <p>Disfruta de un auténtico esquite en vaso de 8 oz. Cada invitado puede prepararlo a su gusto con nuestra variedad de toppings y 3 tipos de Sabritas a elegir.</p>
+                    
+                    <h4>Toppings Incluidos:</h4>
+                    <ul>
+                        <li>Crema, Mayonesa, Queso</li>
+                        <li>Aderezo de Chipotle</li>
+                        <li>Salsas, Tajín, Limón y Sal</li>
+                    </ul>
+
+                    <h4>Bases de Sabritas (Elegir 3):</h4>
+                    <ul>
+                        <li>Chip Verde/Fuego, Tostitos, Rufles, Cheetos Flamin Hot, Doritos Nacho, Takis Fuego.</li>
+                    </ul>
+
+                    <h4>Paquetes:</h4>
+                    <ul class="package-list">
+                        <li><span class="item-name">50 Personas</span> <span class="item-price">$2,250</span></li>
+                        <li><span class="item-name">75 Personas</span> <span class="item-price">$3,375</span></li>
+                        <li><span class="item-name">100 Personas</span> <span class="item-price">$4,500</span></li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="menu-item">
+                <h3>4. Barra de Snacks "A Tu Antojo"</h3>
+                <p class="item-subtitle">¡El servicio más completo con 2 horas de duración!</p>
+
+                <div class="description-block">
+                    <h4>Descripción:</h4>
+                    <p>La barra de snacks favorita de todos. Tus invitados eligen su base de Sabritas en un vaso de 12 oz y le agregan todos los toppings que quieran de nuestra extensa barra.</p>
+                    
+                    <h4>Base de Sabritas (Elegir 3):</h4>
+                    <ul>
+                        <li>Chip Verde/Fuego, Tostitos, Doritos, Rufle o Takis Fuego.</li>
+                    </ul>
+
+                    <h4>Barra de Toppings (Incluye 15 toppings):</h4>
+                    <ul>
+                        <li><strong>Frutas y Verduras:</strong> Jícama, Pepino, Zanahoria, Piña, Mango (en temporada).</li>
+                        <li><strong>Dulces Premium:</strong> Mini Pelón, Pulparindo, Tarugo, Paleta Sandía, Skwinkles.</li>
+                        <li><strong>Variados:</strong> Cacahuate japonés, Panditas, Picagoma, Picafresa, Serpentina, Gomita enchilada.</li>
+                    </ul>
+
+                    <h4>Salsas y Más:</h4>
+                    <ul>
+                        <li>Salsas, Clamatos, Limón, Tajín y Sal.</li>
+                    </ul>
+
+                    <h4>Paquetes:</h4>
+                    <ul class="package-list">
+                        <li><span class="item-name">50 Vasos</span> <span class="item-price">$2,750</span></li>
+                        <li><span class="item-name">75 Vasos</span> <span class="item-price">$4,125</span></li>
+                        <li><span class="item-name">100 Vasos</span> <span class="item-price">$5,500</span></li>
+                    </ul>
+                </div>
+            </article>
+
+        </section>
+
+        <section class="main-section">
+            <h2>Paquetes de Snacks (Combinados)</h2>
+            <p class="item-subtitle" style="font-size: 1rem; margin-top: -1rem; margin-bottom: 1.5rem;">Servicio por 2 horas. Incluye una variedad de nuestros mejores snacks.</p>
+
+            <article class="menu-item">
+                <ul class="package-list">
+                    <li>
+                        <span class="item-name">Paquete 1 (60 piezas)<br><small>Cevichurros, Chimichangas, Sabritas Preparadas.</small></span>
+                        <span class="item-price">$2,250</span>
+                    </li>
+                    <li>
+                        <span class="item-name">Paquete 2 (80 piezas)<br><small>Cevichurros, Chimichangas, Sabritas Preparadas, Cacahuatadas.</small></span>
+                        <span class="item-price">$3,000</span>
+                    </li>
+                    <li>
+                        <span class="item-name">Paquete 3 (100 piezas)<br><small>Lo del Paquete 2 + Esquites.</small></span>
+                        <span class="item-price">$3,750</span>
+                    </li>
+                    <li>
+                        <span class="item-name">Paquete 4 (120 piezas)<br><small>Lo del Paquete 3 + Tostiesquites.</small></span>
+                        <span class="item-price">$4,500</span>
+                    </li>
+                    <li>
+                        <span class="item-name">Paquete 5 (140 piezas)<br><small>Lo del Paquete 4.</small></span>
+                        <span class="item-price">$5,250</span>
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section">
+            <h2>¡Arma tu Propio Paquete! (Precios Individuales)</h2>
+            <p class="item-subtitle" style="font-size: 1rem; margin-top: -1rem; margin-bottom: 1.5rem;">Ideal si buscas algo a tu medida. Se requiere un consumo mínimo de $2,500 y 20-30 piezas por producto.</p>
+            
+            <article class="menu-item">
+                <ul class="package-list">
+                    <li><span class="item-name">Sabrita Preparada</span> <span class="item-price">$40</span></li>
+                    <li><span class="item-name">Cevichurro</span> <span class="item-price">$45</span></li>
+                    <li><span class="item-name">Esquite (Vaso 10 oz)</span> <span class="item-price">$38</span></li>
+                    <li><span class="item-name">Tostiesquite (Vaso 10 oz)</span> <span class="item-price">$40</span></li>
+                    <li><span class="item-name">Cacahuatada (Vaso 10 oz)</span> <span class="item-price">$45</span></li>
+                    <li><span class="item-name">Chimichangas</span> <span class="item-price">$40</span></li>
+                    <li><span class="item-name">Maruchan preparada</span> <span class="item-price">$50</span></li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section">
+            <h2>Otras Barras para tu Evento</h2>
+
+            <article class="menu-item">
+                <h3>1. Barra de Café</h3>
+                <p class="item-subtitle">Servicio por 1.5 horas</p>
+
+                <div class="description-block">
+                    <h4>Descripción:</h4>
+                    <p>Una barra de bebidas frías, perfectas para refrescar tu evento.</p>
+                    
+                    <h4>Opciones:</h4>
+                    <ul>
+                        <li>Bebidas Frappé o a las Rocas.</li>
+                    </ul>
+
+                    <h4>Paquetes:</h4>
+                    <ul class="package-list">
+                        <li><span class="item-name">Paquete 1 (40 bebidas)</span> <span class="item-price">$3,200</span></li>
+                        <li><span class="item-name">Paquete 2 (60 bebidas)</span> <span class="item-price">$4,200</span></li>
+                        <li><span class="item-name">Paquete 3 (80 bebidas)</span> <span class="item-price">$5,200</span></li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="menu-item">
+                <h3>2. Otros Antojitos (Paquetes de 50 personas)</h3>
+                
+                <div class="description-block">
+                    <ul class="package-list">
+                        <li><span class="item-name">Sopa Maruchan Preparada</span> <span class="item-price">$3,000</span></li>
+                    </ul>
+                </div>
+            </article>
+
+        </section>
+
+    </div>
+
+</body>
+</html>
